@@ -7,6 +7,8 @@
   <meta name="description"
     content="Explore a quantum computer using a single quantum harmonic oscillator. Simulate CNOT through free time evolution and visualize wavefunctions, measurement probabilities, and state fidelity in your browser.">
   <title>Quantum Harmonic Oscillator Simulator for Quantum Computation</title>
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1019'/%3E%3Cpath d='M5 7Q16 43 27 7' fill='none' stroke='%236bd9ad' stroke-width='2'/%3E%3Cpath d='M5 24C11 24 10 14 16 14S21 24 27 24' fill='none' stroke='%236facfa' stroke-width='2'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./styles.css?v=4">
 </head>
 
@@ -15,7 +17,8 @@
     <div class="eyebrow">NIELSEN-CHUANG; QUANTUM COMPUTATION AND QUANTUM INFORMATION §7.3.3</div>
     <h1>Quantum Harmonic Oscillator Simulator for Quantum Computation</h1>
     <p class="intro">Encode <strong>two logical qubits</strong> in the energy eigenstates of a single quantum harmonic
-      oscillator. At τ = ωt = π, free time evolution gives only the occupied odd level <span class="ket">|1⟩</span> a relative phase of -1,
+      oscillator. At τ = ωt = π, free time evolution gives only the occupied odd level <span class="ket">|1⟩</span> a
+      relative phase of -1,
       implementing CNOT.</p>
     <div class="grid">
       <section class="panel control">
@@ -46,35 +49,143 @@
             aria-label="Encoding: logical ket 00 is oscillator ket 0; logical ket 01 is oscillator ket 2; logical ket 10 is oscillator ket 4 plus ket 1 over square root of 2; logical ket 11 is oscillator ket 4 minus ket 1 over square root of 2.">
             <mtable columnalign="left center left left center left" displaystyle="true">
               <mtr>
-                <mtd><msub><mrow><mo fence="true" stretchy="false">|</mo><mn>00</mn><mo fence="true" stretchy="false">⟩</mo></mrow><mi mathvariant="normal">L</mi></msub></mtd>
-                <mtd><mo>=</mo></mtd>
-                <mtd><mrow><mo fence="true" stretchy="false">|</mo><mn>0</mn><mo fence="true" stretchy="false">⟩</mo></mrow></mtd>
-                <mtd><msub><mrow><mo fence="true" stretchy="false">|</mo><mn>01</mn><mo fence="true" stretchy="false">⟩</mo></mrow><mi mathvariant="normal">L</mi></msub></mtd>
-                <mtd><mo>=</mo></mtd>
-                <mtd><mrow><mo fence="true" stretchy="false">|</mo><mn>2</mn><mo fence="true" stretchy="false">⟩</mo></mrow></mtd>
+                <mtd>
+                  <msub>
+                    <mrow>
+                      <mo fence="true" stretchy="false">|</mo>
+                      <mn>00</mn>
+                      <mo fence="true" stretchy="false">⟩</mo>
+                    </mrow>
+                    <mi mathvariant="normal">L</mi>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <mo>=</mo>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo fence="true" stretchy="false">|</mo>
+                    <mn>0</mn>
+                    <mo fence="true" stretchy="false">⟩</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <msub>
+                    <mrow>
+                      <mo fence="true" stretchy="false">|</mo>
+                      <mn>01</mn>
+                      <mo fence="true" stretchy="false">⟩</mo>
+                    </mrow>
+                    <mi mathvariant="normal">L</mi>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <mo>=</mo>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo fence="true" stretchy="false">|</mo>
+                    <mn>2</mn>
+                    <mo fence="true" stretchy="false">⟩</mo>
+                  </mrow>
+                </mtd>
               </mtr>
               <mtr>
-                <mtd><msub><mrow><mo fence="true" stretchy="false">|</mo><mn>10</mn><mo fence="true" stretchy="false">⟩</mo></mrow><mi mathvariant="normal">L</mi></msub></mtd>
-                <mtd><mo>=</mo></mtd>
-                <mtd><mfrac>
-                  <mrow><mrow><mo fence="true" stretchy="false">|</mo><mn>4</mn><mo fence="true" stretchy="false">⟩</mo></mrow><mo>+</mo><mrow><mo fence="true" stretchy="false">|</mo><mn>1</mn><mo fence="true" stretchy="false">⟩</mo></mrow></mrow>
-                  <msqrt><mn>2</mn></msqrt>
-                </mfrac></mtd>
-                <mtd><msub><mrow><mo fence="true" stretchy="false">|</mo><mn>11</mn><mo fence="true" stretchy="false">⟩</mo></mrow><mi mathvariant="normal">L</mi></msub></mtd>
-                <mtd><mo>=</mo></mtd>
-                <mtd><mfrac>
-                  <mrow><mrow><mo fence="true" stretchy="false">|</mo><mn>4</mn><mo fence="true" stretchy="false">⟩</mo></mrow><mo>−</mo><mrow><mo fence="true" stretchy="false">|</mo><mn>1</mn><mo fence="true" stretchy="false">⟩</mo></mrow></mrow>
-                  <msqrt><mn>2</mn></msqrt>
-                </mfrac></mtd>
+                <mtd>
+                  <msub>
+                    <mrow>
+                      <mo fence="true" stretchy="false">|</mo>
+                      <mn>10</mn>
+                      <mo fence="true" stretchy="false">⟩</mo>
+                    </mrow>
+                    <mi mathvariant="normal">L</mi>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <mo>=</mo>
+                </mtd>
+                <mtd>
+                  <mfrac>
+                    <mrow>
+                      <mrow>
+                        <mo fence="true" stretchy="false">|</mo>
+                        <mn>4</mn>
+                        <mo fence="true" stretchy="false">⟩</mo>
+                      </mrow>
+                      <mo>+</mo>
+                      <mrow>
+                        <mo fence="true" stretchy="false">|</mo>
+                        <mn>1</mn>
+                        <mo fence="true" stretchy="false">⟩</mo>
+                      </mrow>
+                    </mrow>
+                    <msqrt>
+                      <mn>2</mn>
+                    </msqrt>
+                  </mfrac>
+                </mtd>
+                <mtd>
+                  <msub>
+                    <mrow>
+                      <mo fence="true" stretchy="false">|</mo>
+                      <mn>11</mn>
+                      <mo fence="true" stretchy="false">⟩</mo>
+                    </mrow>
+                    <mi mathvariant="normal">L</mi>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <mo>=</mo>
+                </mtd>
+                <mtd>
+                  <mfrac>
+                    <mrow>
+                      <mrow>
+                        <mo fence="true" stretchy="false">|</mo>
+                        <mn>4</mn>
+                        <mo fence="true" stretchy="false">⟩</mo>
+                      </mrow>
+                      <mo>−</mo>
+                      <mrow>
+                        <mo fence="true" stretchy="false">|</mo>
+                        <mn>1</mn>
+                        <mo fence="true" stretchy="false">⟩</mo>
+                      </mrow>
+                    </mrow>
+                    <msqrt>
+                      <mn>2</mn>
+                    </msqrt>
+                  </mfrac>
+                </mtd>
               </mtr>
             </mtable>
           </math>
           <math class="evolution" xmlns="http://www.w3.org/1998/Math/MathML" display="block"
             aria-label="U of tau ket n equals e to the minus i n tau times ket n.">
-            <mi>U</mi><mo>(</mo><mi>τ</mi><mo>)</mo>
-            <mrow><mo fence="true" stretchy="false">|</mo><mi>n</mi><mo fence="true" stretchy="false">⟩</mo></mrow>
-            <mo>=</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi mathvariant="normal">i</mi><mi>n</mi><mi>τ</mi></mrow></msup>
-            <mrow><mo fence="true" stretchy="false">|</mo><mi>n</mi><mo fence="true" stretchy="false">⟩</mo></mrow>
+            <mi>U</mi>
+            <mo>(</mo>
+            <mi>τ</mi>
+            <mo>)</mo>
+            <mrow>
+              <mo fence="true" stretchy="false">|</mo>
+              <mi>n</mi>
+              <mo fence="true" stretchy="false">⟩</mo>
+            </mrow>
+            <mo>=</mo>
+            <msup>
+              <mi mathvariant="normal">e</mi>
+              <mrow>
+                <mo>−</mo>
+                <mi mathvariant="normal">i</mi>
+                <mi>n</mi>
+                <mi>τ</mi>
+              </mrow>
+            </msup>
+            <mrow>
+              <mo fence="true" stretchy="false">|</mo>
+              <mi>n</mi>
+              <mo fence="true" stretchy="false">⟩</mo>
+            </mrow>
           </math>
         </div>
         <div class="muted">Units: ℏ = m = ω = 1. The global phase exp(-iτ/2) is omitted (Eq. 7.13).</div>
@@ -115,7 +226,8 @@
       evolution in Eqs. (7.13)-(7.15) of the textbook. Wavefunction and fidelity visualizations are additional features.
       It does not model hardware for arbitrary initial-state preparation, measurement, or sequences of arbitrary gates,
       and is not a practical, general-purpose quantum computer.
-      Realizing a state evolution that implements a computation is not, by itself, sufficient to make a practical quantum computer.</p>
+      Realizing a state evolution that implements a computation is not, by itself, sufficient to make a practical
+      quantum computer.</p>
   </main>
   <script type="module" src="./app.js?v=2"></script>
 </body>
