@@ -222,12 +222,11 @@
           encoding does not use <span class="ket">|3⟩</span>.</p>
       </section>
     </div>
-    <p class="note"><strong>Physical limitations:</strong> This model reproduces the ideal encoding and free time
-      evolution in Eqs. (7.13)-(7.15) of the textbook. Wavefunction and fidelity visualizations are additional features.
-      It does not model hardware for arbitrary initial-state preparation, measurement, or sequences of arbitrary gates,
-      and is not a practical, general-purpose quantum computer.
-      Realizing a state evolution that implements a computation is not, by itself, sufficient to make a practical
-      quantum computer.</p>
+    <p class="note"><strong>Physical limitations:</strong> Nielsen &amp; Chuang (§7.3.4) explain that
+      this scheme requires eigenvalue information that is generally unknown for arbitrary computations, does not
+      generally allow computations to be cascaded, and uses an energy range that grows exponentially with the number
+      of encoded qubits instead of a scalable digital representation. This simulator illustrates the ideal encoding
+      and CNOT evolution only; it is not a practical, general-purpose quantum computer.</p>
   </main>
   <script type="module" src="./app.js?v=2"></script>
 </body>
