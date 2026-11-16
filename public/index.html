@@ -222,11 +222,11 @@
           encoding does not use <span class="ket">|3⟩</span>.</p>
       </section>
     </div>
-    <p class="note"><strong>Physical limitations:</strong> Nielsen &amp; Chuang (§7.3.4) explain that
-      this scheme requires eigenvalue information that is generally unknown for arbitrary computations, does not
-      generally allow computations to be cascaded, and uses an energy range that grows exponentially with the number
-      of encoded qubits instead of a scalable digital representation. This simulator illustrates the ideal encoding
-      and CNOT evolution only; it is not a practical, general-purpose quantum computer.</p>
+    <p class="note"><strong>Model scope:</strong> This simulator models the two-qubit encoding and free evolution of
+      a single ideal harmonic oscillator in §7.3, using levels |0⟩, |1⟩, |2⟩, and |4⟩ to implement CNOT at τ = π.
+      It assumes a prepared pure input and an exactly harmonic energy spectrum. State-preparation hardware,
+      anharmonicity, dissipation, decoherence, and detector effects are not included. Arbitrary gate sequences and
+      extension to larger logical registers are outside this model.</p>
   </main>
   <script type="module" src="./app.js?v=2"></script>
 </body>
